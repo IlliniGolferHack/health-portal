@@ -9,9 +9,23 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Prevents the 'flash' of uncompiled code */
+        [id="root"]:empty { background: #f8fafc; height: 100vh; }
+    </style>
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/babel" src="/main.js"></script>
+    <script type="text/babel">
+        // Grab hooks and icons for the browser environment
+        const { useState, useEffect, useMemo } = React;
+        const { 
+            Activity, Target, TrendingDown, TrendingUp, Calendar, 
+            Footprints, Dumbbell, ChevronDown, ChevronUp, Check, 
+            Trash2, Award, Zap, Timer, BarChart3 
+        } = lucide;
+
+        // --- PASTE THE MAIN.JS CONTENT BELOW THIS LINE ---
+    </script>
 </body>
 </html>
